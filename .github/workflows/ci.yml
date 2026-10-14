@@ -35,7 +35,7 @@ jobs:
         run: ./mvnw --batch-mode package -DskipTests
 
       - name: Publicar artefato
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: biblioteca-${{ github.sha }}
           path: target/*.jar
@@ -43,7 +43,7 @@ jobs:
 
       - name: Publicar relatório de testes
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: relatorio-testes-${{ github.sha }}
           path: target/surefire-reports/
