@@ -38,9 +38,21 @@ Cada execução usa uma máquina virtual nova e limpa, então o resultado não d
 4. Corrigir o código ou o teste e enviar um novo commit.
 
 ## Evidências
-- Execução com sucesso: [print ou link da execução]
-- Falha detectada (teste com falha proposital): [print ou link da execução]
 
+Histórico completo: aba **Actions** do repositório.
+
+| Execução | Resultado | O que demonstra |
+|---|---|---|
+| [#2](https://github.com/Hendreu04/biblioteca/actions/runs/38620503410) | ✅ Sucesso | Build, testes e artefatos `biblioteca-<hash>` e `relatorio-testes-<hash>` gerados |
+| [#4](https://github.com/Hendreu04/biblioteca/actions/runs/38621983601) | ❌ Falha | Teste com falha proposital: o pipeline parou em "Compilar e executar testes" e o JAR **não** foi gerado |
+| #5 | ✅ Sucesso | Correção do teste: o pipeline voltou ao normal |
+
+**Trecho do log da falha (#4):**
+- `Tests run: 1, Failures: 1` → um teste executado, um falhou
+- `BibliotecaApplicationTests.contextLoads:11 Falha proposital para testar o pipeline` → qual teste, em que linha e por quê
+- `BUILD FAILURE` → o build foi interrompido
+
+[arraste aqui os 4 prints]
 ## Segurança e segredos
 - O pipeline usa `permissions: contents: read` (menor privilégio).
 - Nenhuma senha ou token é usado ou exibido nos logs.
