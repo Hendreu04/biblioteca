@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class BibliotecaApplicationTests {
 
 	@Test
-	void contextLoads() {
-	}
-
+   void contextLoads() {
+       org.junit.jupiter.api.Assertions.fail("Falha proposital para testar o pipeline");
+   }
 }
