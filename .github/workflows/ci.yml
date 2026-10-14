@@ -1,0 +1,49 @@
+name: CI Biblioteca
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-e-testes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Dar permissão ao Maven Wrapper
+        run: chmod +x mvnw
+
+      - name: Compilar e executar testes
+        run: ./mvnw --batch-mode clean test
+
+      - name: Empacotar JAR
+        run: ./mvnw --batch-mode package -DskipTests
+
+      - name: Publicar artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: biblioteca-${{ github.sha }}
+          path: target/*.jar
+          retention-days: 7
+
+      - name: Publicar relatório de testes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-testes-${{ github.sha }}
+          path: target/surefire-reports/
