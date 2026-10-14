@@ -8,6 +8,5 @@ class BibliotecaApplicationTests {
 
 	@Test
    void contextLoads() {
-       org.junit.jupiter.api.Assertions.fail("Falha proposital para testar o pipeline");
    }
 }
