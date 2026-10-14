@@ -52,7 +52,18 @@ Histórico completo: aba **Actions** do repositório.
 - `BibliotecaApplicationTests.contextLoads:11 Falha proposital para testar o pipeline` → qual teste, em que linha e por quê
 - `BUILD FAILURE` → o build foi interrompido
 
-[arraste aqui os 4 prints]
+### Histórico de execuções
+![Histórico](docs/print1-historico.png)
+
+### Execução com sucesso e artefatos gerados
+![Sucesso](docs/print2-sucesso.png)
+
+### Falha detectada: o JAR não foi gerado
+![Falha](docs/print3-falha.png)
+
+### Log da falha
+![Log da falha](docs/print4-log-falha.png)
+
 ## Segurança e segredos
 - O pipeline usa `permissions: contents: read` (menor privilégio).
 - Nenhuma senha ou token é usado ou exibido nos logs.
