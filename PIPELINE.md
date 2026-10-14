@@ -45,7 +45,7 @@ Histórico completo: aba **Actions** do repositório.
 |---|---|---|
 | [#2](https://github.com/Hendreu04/biblioteca/actions/runs/38620503410) | ✅ Sucesso | Build, testes e artefatos `biblioteca-<hash>` e `relatorio-testes-<hash>` gerados |
 | [#4](https://github.com/Hendreu04/biblioteca/actions/runs/38621983601) | ❌ Falha | Teste com falha proposital: o pipeline parou em "Compilar e executar testes" e o JAR **não** foi gerado |
-| #5 | ✅ Sucesso | Correção do teste: o pipeline voltou ao normal |
+| [#5](https://github.com/Hendreu04/biblioteca/actions/runs/38623146313) | ✅ Sucesso | Correção do teste: o pipeline voltou ao normal |
 
 **Trecho do log da falha (#4):**
 - `Tests run: 1, Failures: 1` → um teste executado, um falhou
