@@ -1,9 +1,9 @@
 # Trabalho 5 — Pipeline CI mínimo e reprodutível
 
-**Disciplina:** Cloud Computing e DevOps Avançado — Prof. Ranghetti
-**Equipe:** [nomes e RAs]
-**Ferramenta:** GitHub Actions
-**Arquivo do pipeline:** `.github/workflows/ci.yml`
+- **Disciplina:** Cloud Computing e DevOps Avançado — Prof. Ranghetti
+- **Equipe:** Hendreu Satoshi (240061), André Luiz (14623), Gabriel Friedrichsen (14552)
+- **Ferramenta:** GitHub Actions
+- **Arquivo do pipeline:** `.github/workflows/ci.yml`
 
 ## Gatilho
 O pipeline é executado automaticamente em:
