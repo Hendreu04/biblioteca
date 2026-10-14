@@ -53,16 +53,16 @@ Histórico completo: aba **Actions** do repositório.
 - `BUILD FAILURE` → o build foi interrompido
 
 ### Histórico de execuções
-![Histórico](docs/print1-historico.png)
+![Histórico](docs/print1-historico.png.png)
 
 ### Execução com sucesso e artefatos gerados
-![Sucesso](docs/print2-sucesso.png)
+![Sucesso](docs/print2-sucesso.png.png)
 
 ### Falha detectada: o JAR não foi gerado
-![Falha](docs/print3-falha.png)
+![Falha](docs/print3-falha.png.png)
 
 ### Log da falha
-![Log da falha](docs/print4-log-falha.png)
+![Log da falha](docs/print4-log-falha.png.png)
 
 ## Segurança e segredos
 - O pipeline usa `permissions: contents: read` (menor privilégio).
